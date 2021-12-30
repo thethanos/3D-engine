@@ -1,0 +1,9 @@
+[submodule "lib/assimp.git"]
+	path = lib/assimp.git
+	url = https://github.com/assimp/assimp.git
+[submodule "libs/assimp.git"]
+	path = libs/assimp.git
+	url = https://github.com/assimp/assimp.git
+[submodule "libs/glfw.git"]
+	path = libs/glfw.git
+	url = https://github.com/glfw/glfw.git

@@ -12,8 +12,8 @@ add_executable(start main.cpp ${SOURCES})
 
 OPTION(BUILD_SHARED_LIBS "Build package with shared libraries." OFF)
 
-add_subdirectory("lib/assimp")
-add_subdirectory("lib/glfw")
+add_subdirectory("libs/assimp")
+add_subdirectory("libs/glfw")
 
-include_directories(include lib/assimp/include lib/glfw/include)
+include_directories(include libs/assimp/include libs/glfw/include)
 target_link_libraries(start glfw assimp)
