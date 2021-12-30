@@ -10,10 +10,10 @@ aux_source_directory(src SOURCES)
 
 add_executable(start main.cpp ${SOURCES})
 
-include_directories(include)
-target_link_libraries(start dl glfw)
+OPTION(BUILD_SHARED_LIBS "Build package with shared libraries." OFF)
 
-find_package(assimp REQUIRED)
-link_directories(${ASSIMP_LIBRARY_DIRS})
-include_directories(${ASSIMP_INCLUDE_DIRS})
-target_link_libraries(start ${ASSIMP_LIBRARIES})
+add_subdirectory("lib/assimp")
+add_subdirectory("lib/glfw")
+
+include_directories(include lib/assimp/include lib/glfw/include)
+target_link_libraries(start glfw assimp)

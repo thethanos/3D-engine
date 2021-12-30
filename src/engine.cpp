@@ -11,7 +11,7 @@ Engine::Engine(const std::string& title, uint width, uint height)
 
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     m_pWnd = std::unique_ptr<GLFWwindow, deleter>(glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr));

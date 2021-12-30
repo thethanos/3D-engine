@@ -1,7 +1,5 @@
 #include "mesh.hpp"
 
-#include <iostream>
-
 Mesh::Mesh(std::vector<vertex>& vertices, std::vector<GLuint>& indices, std::vector<texture>& textures)
 {   
     this->vertices = std::move(vertices);

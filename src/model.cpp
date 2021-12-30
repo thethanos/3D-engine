@@ -20,7 +20,7 @@ void Model::Load(const std::string& path, const std::string& name)
     aiProcess_JoinIdenticalVertices);
 
     if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
-        throw std::runtime_error("Faile to load model " + name);
+        throw std::runtime_error("Failed to load model " + name);
 
     process_node(scene->mRootNode, scene);
 }
